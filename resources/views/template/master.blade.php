@@ -7,18 +7,13 @@
     <title>Diep_Pro @yield('title')</title>
     <base href="{{ URL::asset('/') }} ">
     <link rel="stylesheet" href="public/css/styles.css">
+    @yield('linkstyle')
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container mt-lg-5">
-    <nav class="navbar fixed-top navbar-light bg-primary header-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Logo</a>
-            <div class="account" href="#">ACCOUNT</div>
-        </div>
-      </nav>
-      @yield('content')
+    <div class="container-fluid">
+        @yield('content')
     </div>
  <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
