@@ -1,0 +1,23 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 130vh;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: chocolate;
+}
+a:active{
+    color: tomato;
+    font-weight: bold;
+}
+.header-top{
+    height: 50px;
+}
+.account{
+    display: inline-block;
+    color: brown;
+}
