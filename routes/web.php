@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    // return view('index');
+    echo 'Yêu cầu đăng nhập trước nhé';
 });
 Route::get('login', function () {
     return view('login');
 });
+Route::post('login', 'AuthController@checkLogin');

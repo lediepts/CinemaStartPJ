@@ -15,13 +15,18 @@
 			<div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
 					Login
-				</span>
-				<span class="errorMes" style="color: red">
-				</span>
-				<form class="login100-form validate-form p-b-33 p-t-5" method="get" action="./">
+                </span>
+                @if (Session::has('message'))
+                <div style="color: red;display: flex;justify-content: center;" >
+                    {{ Session::get('message') }}
+				</div>
+                @endif
+
+				<form class="login100-form validate-form p-b-33 p-t-5" method="post" action="login" >
 
 					<div class="wrap-input100 validate-input" data-validate="Enter username">
-						<input class="input100" type="email" name="email" placeholder="Email">
+                        <input class="input100" type="email" name="email" placeholder="Email" value="{{ old('email') }}">
+                        @csrf
 						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
 					</div>
 
@@ -29,7 +34,7 @@
 						<span class="btn-show-pass">
 							<i class="fa fa-eye"></i>
 						</span>
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Password" autocomplete="none" value="{{ old('password') }}">
 						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
 					</div>
 					<div>
@@ -47,7 +52,6 @@
 							</button>
 						</div>
 					</div>
-
 				</form>
 			</div>
 		</div>
